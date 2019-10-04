@@ -1,0 +1,18 @@
+@charset "utf-8";
+/***▼header・main・footer共通***/
+/*▼配置全般*/
+body {
+	background-color: var(--background-color-whiteporcelain);
+}
+/*▲配置全般*/
+/***▲header・main・footer共通***/
+
+/***▼header***/
+/***▲header***/
+
+/***▼main***/
+/*▼table メニュー*/
+/***▲main***/
+
+/***▼footer***/
+/***▲footer***/

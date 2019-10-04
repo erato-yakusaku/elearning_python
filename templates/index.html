@@ -1,0 +1,316 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- ▼▼▼container -->
+<div id="container">
+    <!-- ▼▼header -->
+    <header>
+        <!-- ▼Homeへ戻る（ダミー） -->
+        <div id="home_dummy">
+            <p></p>
+        </div>
+        <!-- ▲Homeへ戻る（ダミー） -->
+        <!-- ▼ページタイトル -->
+        <div class="pageTitle">
+            <!--
+            <h1>{{ title }}</h1>
+            -->
+            <h1>{{ name0 }}</h1>
+            <h2></h2>
+        </div>
+        <!-- ▲ページタイトル -->
+        <!-- ▼概要説明 -->
+        <div id="summary_parent">
+            <p id="summary_child">Pythonを利用したデータ解析手法を習得するためのサイトです。</p>
+        </div>
+        <!-- ▲概要説明 -->
+    </header>
+    <!-- ▲▲header -->
+    <!-- ▼▼main -->
+    <div id="main">
+        <!-- ▼ページ先頭へ戻る -->
+        <div id="page_top"><a href="#"></a></div>
+        <!-- ▲ページ先頭へ戻る -->
+        <!-- ▼article メニュー -->
+        <article id="menu">
+            <!-- ▼絞り込みワード検索 -->
+            <div id="refine_search">
+                <form action="#">
+                    絞り込みワード：
+                    <input type="text" name="search" size="30" maxlength="20" value="" id="search"/>
+                </form>
+            </div>
+            <!-- ▲絞り込みワード検索 -->
+            <!-- ▼table メニュー -->
+            <table id="table_menu">
+                <!-- ▼大分類_環境設定 -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">環境設定</th>
+                    <th class="chapter02"></th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section" id="procedure_install_python"><a href="{{ url_for('transit_another_page',page_name='procedure')}}"><span
+                            class="tooltip"
+                            title="2019.8月現在の最新版は3.7系ですが，ディープラーニング用のTensorFlowや音声認識用のPyAudioに対応したバージョンを使います">Python3.6系のインストール</span></a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">Anaconda3（JupyterNotebook含む）</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">PyCharm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">Anaconda3とPyCharmの連携</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_環境設定 -->
+                <!-- ▼大分類_GCP01 -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">GCPの第一歩</th>
+                    <th class="chapter02"></th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section"><a
+                            href="{{ url_for('transit_another_page',page_name='create_google_account')}}">GCP専用の新規Googleアカウント作成HTML版</a>
+                    </td>
+                    <td class="section">【参考】<a
+                            href="../static/powerpoint/GCP/hands_on_GCPの第一歩①_GCP専用のGoogleアカウント作成★たたき台★.ppsx">PowerPoint版</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">プロジェクトの作成，科研費への紐づけ</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">GCPツールの利用（ごく簡単なもの）</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">GCPコンソールの概要，Google Cloud SDKのインストール</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">GCPの基本サービスの用途－GCE，GCS，GAE，BigQuery，SQL－</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_GCP01 -->
+                <!-- ▼大分類_GCP02 -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">GCPの次のステップ</th>
+                    <th class="chapter02"></th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">画像認識<a href="https://cloud.google.com/vision/automl/docs/beginners-guide?hl=ja">AutoMLVision－画像分類－</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">画像認識<a href="https://cloud.google.com/vision/docs/object-localizer?hl=ja">AutoMLVision－ObjectDetection－</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">音声認識SpeedchAPI</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">自然言語処理（翻訳）Translate API</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_GCP02 -->
+                <!-- ▼大分類_データ解析 Python01 -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">データ解析Python01</th>
+                    <th class="chapter02">－各種モジュールの用途，よく使う文法－</th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">Numpy</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">Scipy</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">Pandas</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">Matplotlib</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_データ解析_Python01 -->
+                <!-- ▼大分類_データ解析 Python02 -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">データ解析Python02</th>
+                    <th class="chapter02">－機械学習－</th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">scikit-learn</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_データ解析_Python02 -->
+                <!-- ▼大分類_データ解析 Python03 -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">データ解析Python03</th>
+                    <th class="chapter02">－ディープラーニング－</th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">TensorFlow</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">Keras</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_データ解析_Python03 -->
+                <!-- ▼大分類_他のサイト -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">【参考】</th>
+                    <th class="chapter02"></th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section"><a href="{{ url_for('transit_another_page',page_name='menu_create_website')}}">Webサイト作成</a></td>
+                    <td>HTML&amp;CSS&amp;JavaScript</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section">正規表現</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_他のサイト -->
+                <!-- ▼大分類_テストページ -->
+                <tbody>
+                <tr>
+                    <th class="chapter01">★テストページ★</th>
+                    <th class="chapter02"></th>
+                    <th class="chapter03"></th>
+                    <th class="chapter04"></th>
+                    <th class="chapter05"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="section"><a href="{{ url_for('transit_another_page',page_name='test_menu')}}">test_page_menu</a></td>
+                    <td>HTML&amp;CSS&amp;JavaScript</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <!-- ▲大分類_テストページ -->
+            </table>
+            <!-- ▲table メニュー -->
+        </article>
+        <!-- ▲article メニュー -->
+    </div>
+    <!-- ▲▲main -->
+    <!-- ▼▼footer -->
+    <footer>
+        <p class="copyright"></p>
+    </footer>
+    <!-- ▲▲footer -->
+</div>
+<!-- ▲▲▲container -->
+{% endblock %}

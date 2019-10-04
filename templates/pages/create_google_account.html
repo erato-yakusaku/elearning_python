@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- ▼▼▼container -->
+<div id="container">
+  <!-- ▼▼header -->
+  <header>
+    <!-- ▼データ解析 Python（Home）へ戻る -->
+    <div id="home">
+      <p><a href="{{ url_for('menu_data_analysis_python')}}">データ解析&nbsp;Pythonへ</a></p>
+    </div>
+    <!-- ▲データ解析 Python（Home）へ戻る -->
+    <!-- ▼ページタイトル -->
+    <div class="pageTitle">
+      <h1>GCPの第一歩①</h1>
+      <h2>GCP専用の新規Googleアカウント作成</h2>
+    </div>
+    <!-- ▲ページタイトル -->
+    <!-- ▼概要説明 -->
+    <div id="summary_parent">
+      <p id="summary_child">研究室で統一した形式のアカウントを作成します。</p>
+    </div>
+    <!-- ▲概要説明 -->
+  </header>
+  <!-- ▲▲header -->
+  <!-- ▼▼main -->
+  <div id="main">
+    <div id="page_top"><a href="#"></a></div>
+    <!-- ▼article -->
+    <article>
+      <!-- ▼contents -->
+      <div class="contents">
+        <ol>
+          <li><a href="#procedure01">新規アカウント作成用のWebサイト</a></li>
+          <li><a href="#procedure02">必要事項の入力①</a></li>
+          <li><a href="#procedure03">必要事項の入力②</a></li>
+          <li><a href="#procedure04">確認</a></li>
+        </ol>
+      </div>
+      <!-- ▲contents -->
+      <!-- ▼procedure -->
+      <div class="procedure">
+        <ol>
+          <!-- 手順の冒頭にはclass="procedure"を指定しない -->
+          <li id="procedure01">
+          新規アカウント作成用のWebサイト
+          <ol>
+            <li class="proc">キーワード検索「Google」「アカウント作成」　または … <br>
+              <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成01_キーワード検索01html.png" alt="アカウント作成01_キーワード検索01"> </p>
+            </li>
+            <li class="proc">ここをクリック<br>
+              <p><a href="https://accounts.google.com/SignUp">参考： https://accounts.google.com/SignUp</a> </p>
+              <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成01_URL検索01html.png" alt="アカウント作成01_URL検索01"> </p>
+            </li>
+          </ol>
+          </li>
+          <li id="procedure02">必要事項の入力①
+            <ol>
+              <li class="proc">氏名，Gメールアドレス，パスワードを入力<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成02html.png" alt="アカウント作成02"> </p>
+              </li>
+              <li class="proc">氏名，Gメールアドレス，パスワードを入力<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成03html.png" alt="アカウント作成03"> </p>
+              </li>
+              <li class="proc">次へ<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成03次へhtml.png" alt="アカウント作成03次へ"> </p>
+              </li>
+            </ol>
+          </li>
+          <li id="procedure03">必要事項の入力②
+            <ol>
+              <li class="proc">生年月日，性別を入力<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成04_空白個人情報入力前html.png" alt="アカウント作成04_空白個人情報入力前"> </p>
+              </li>
+              <li class="proc">生年月日，性別を入力<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成04html.png" alt="アカウント作成04"> </p>
+              </li>
+              <li class="proc">次へ<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成04次へhtml.png" alt="アカウント作成04次へ"> </p>
+              </li>
+            </ol>
+          </li>
+          <li id="procedure04">確認
+            <ol>
+              <li class="proc">同意する<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成05_同意するhtml.png" alt="アカウント作成05_同意するhtml"> </p>
+              </li>
+              <li class="proc">完了！<br>
+                <p> <img class="img_account" src="../../static/img/create_google_account/for_html/アカウント作成07html.png" alt="アカウント作成07"> </p>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+      <!-- ▲procedure -->
+    </article>
+    <!-- ▲article -->
+    <p id="closing"></p>
+  </div>
+  <!-- ▲▲main -->
+  <!-- ▼▼footer -->
+  <footer>
+    <p class="copyright"></p>
+  </footer>
+  <!-- ▲▲footer -->
+</div>
+<!-- ▲▲▲container -->
+{% endblock %}

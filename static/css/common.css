@@ -1,0 +1,311 @@
+@charset "utf-8";
+/*▼▼▼▼▼★★★★★仮置き Excel → JSON → HTML変換試行用★★★★★▼▼▼▼▼*/
+#sample_excel_to_json_to_html, #button_sample_excel_to_json_to_html {
+    position: absolute;
+    top: -13vh;
+    right: 2vh;
+    background-color: #FF0
+}
+
+/*▲▲▲▲▲★★★★★仮置き Excel → JSON → HTML変換試行用★★★★★▲▲▲▲▲*/
+
+
+/***▼header・main・footer共通***/
+/*▼css変数*/
+:root {
+    /*▽背景 色*/
+    --background-color-whiteporcelain: #f8fbf8; /*白磁色*/
+    --background-color-lightpink: #f8edef; /*薄いピンク色*/
+    --background-color-cell: #f0f8ff; /*aliceblue*//*#bbe2f1;*//*baby blue*/
+    --background-color-scale: #b2cbe4; /*light blue*/
+    --background-color-tooltip: #ffedab; /*sunshineyellow*/
+    --background-color-rightgray: #eee; /*薄いグレー*/
+    /*△背景 色*/
+    /*▽テキスト 色*/
+    --color-base: #333;
+    --color-emphasis: #f00;
+    --color-link: #00f;
+    --color-yakusaku: #b94047; /*#9F3B42;*//*臙脂色*/
+    /*△テキスト 色*/
+    /*▽テキスト サイズ*/
+    --font-size-base-height: 1.5vh;
+    --font-size-h1-height: 2.5vh;
+    --font-size-h2-height: 2vh;
+    --font-size-large-height: 3vh;
+    /*△テキスト サイズ*/
+    /*▽ボーダー 色*/
+    --border-color-base: #ddd;
+    /*△ボーダー 色*/
+    /*▽ボーダー 角丸*/
+    --border-radius-base: 1vh;
+    /*△ボーダー 角丸*/
+}
+
+/*▲css変数*/
+/*▼配置全般*/
+body {
+    position: relative;
+    width: 98vw;
+    height: 100vh; /* height_body = height_header + height_main + height_footer */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--background-color-whiteporcelain);
+}
+
+#container {
+    position: relative;
+    width: 98vw; /* height_container = height_body */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--background-color);
+    color: var(--color-base);
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+header {
+    position: relative;
+    height: 15vh; /* height_header */
+}
+
+#main {
+    position: relative;
+    height: 80vh; /* height_main */
+}
+
+footer {
+    position: relative;
+    height: 3vh; /* height_footer */
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+/*▲配置全般*/
+/*▼リンク*/
+a {
+    /*
+    text-decoration: none;
+    */
+    color: #00f;
+}
+
+/*▲リンク*/
+/*▼tooltip（配置・動作はcommon.jsに記述）*/
+.ui-tooltip {
+    border-radius: var(--border-radius-base);
+    background-color: var(--background-color-tooltip);
+    font-size: var(--font-size-base-height);
+    color: var(--color-emphasis);
+}
+
+/*▲tooltip*/
+/*▼基本仕様*/
+strong {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: bold;
+    color: #F00;
+}
+
+/*▲基本仕様*/
+/***▲header・main・footer共通***/
+
+/***▼header***/
+/*▼Homeボタン*/
+#home, #home_dummy, #menu_create_website {
+    position: relative;
+    top: 1vh;
+    left: 1vw;
+    font-size: var(--font-size-base-height);
+}
+
+/*▲Homeボタン*/
+/*▼タイトル*/
+.pageTitle {
+    position: relative;
+    padding-top: 1vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: var(--font-size-h1-height);
+}
+
+h2 {
+    text-align: center;
+    font-size: var(--font-size-h2-height);
+}
+
+/*▲タイトル*/
+/*▼概要説明*/
+#summary_parent {
+    position: relative;
+    margin-top: 0.5vh;
+    text-align: center;
+}
+
+#summary_child {
+    display: inline-block;
+    border-radius: 0.5vw;
+    padding: 0.2vh 3vw;
+    background-color: var(--background-color-rightgray);
+    font-weight: bold;
+    font-size: var(--font-size-base-height);
+}
+
+/*▲概要説明*/
+/***▲header***/
+
+/***▼main***/
+/*▼chapter・section・section・subsection*/
+.chapter01, .chapter02 {
+    padding-left: 1vw;
+    background-color: var(--background-color-scale);
+    font-weight: bold;
+}
+
+.chapter01 {
+    border-top-left-radius: 0.7vw;
+    color: var(--color-yakusaku);
+}
+
+.chapter02 {
+    border-top-right-radius: 0.7vw;
+    color: var(--color-base);
+}
+
+/*▲chapter・section・section・subsection*/
+/*▼ページ先頭へ戻るボタン*/
+#page_top {
+    position: relative;
+    z-index: 999;
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    opacity: 0.6;
+}
+
+#page_top a {
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-decoration: none;
+}
+
+#page_top a::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #3f98ef;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#page_top a::after {
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    color: #3f98ef;
+}
+
+/*▲ページ先頭へ戻るボタン*/
+/*▼絞り込みワード検索*/
+#refine_search {
+    position: relative;
+    padding-left: 50vw;
+    font-size: var(--font-size-base-height);
+}
+
+/*▲絞り込みワード検索*/
+/*▼table メニュー*/
+#table_menu {
+    position: relative;
+    top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--font-size-base-height);
+}
+
+/*▲table メニュー*/
+/*▼目次・手順・セクション*/
+.contents {
+    position: relative;
+    top: 2vh;
+    left: 2vw;
+    font-size: var(--font-size-h1-height);
+}
+
+.procedure {
+    position: relative;
+    z-index: 1;
+    top: 10vh;
+    left: 2vw;
+    font-size: var(--font-size-h1-height);
+}
+
+.proc {
+    position: relative;
+    margin-top: 5vh;
+    left: 4vw;
+    font-size: var(--font-size-h2-height);
+}
+
+.img_account {
+    position: relative;
+    width: 50vw;
+    left: 20vw;
+}
+
+/*▲目次・手順・セクション*/
+/*▼箇条書き*/
+.procedure {
+    margin-top: 10vh;
+}
+
+.contents ol, .procedure ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+
+.contents li:before, .procedure li:before {
+    counter-increment: item;
+    content: counters(item, "-") ". ";
+}
+
+/*▲箇条書き*/
+/*▼お疲れさまでした！*/
+#closing {
+    position: relative;
+    padding-top: 10vh;
+    left: 5vw;
+    font-size: var(--font-size-large-height);
+}
+
+/*▲お疲れさまでした！*/
+/***▲main***/
+
+/***▼footer***/
+/*▼copyright*/
+#copyright {
+    font-size: 1vh;
+    text-align: center;
+    color: var(--color-base);
+}
+
+/*▲copyright*/
+/***▲footer***/

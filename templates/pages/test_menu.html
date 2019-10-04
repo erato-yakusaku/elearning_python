@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- ▼▼▼container -->
+<div id="container">
+    <!-- ▼▼header -->
+    <header>
+        <!-- ▼Webサイト作成メニューへ戻る -->
+        <div id="menu_create_website">
+            <p><a href="{{ url_for('transit_another_page',page_name='menu_create_website') }}">Webサイト作成へ</a></p>
+        </div>
+        <!-- ▲Webサイト作成メニューへ戻る -->
+        <!-- ▲Homeへ戻る -->
+        <!-- ▼ページタイトル -->
+        <div class="pageTitle">
+            <h1>HTMLを画面上で直接編集</h1>
+            <h2>★サブタイトル★</h2>
+        </div>
+        <!-- ▲ページタイトル -->
+        <!-- ▼概要説明 -->
+        <div id="summary_parent">
+            <p id="summary_child">★概要説明★</p>
+        </div>
+        <!-- ▲概要説明 -->
+    </header>
+    <!-- ▲▲header -->
+    <!-- ▼▼main -->
+    <div id="main">
+        <!-- ▼ページ先頭へ戻る -->
+        <div id="page_top"><a href="#"></a></div>
+        <!-- ▲ページ先頭へ戻る -->
+        <!-- ▼article メニュー -->
+        <article id="menu">
+            <!-- ▼絞り込みワード検索 -->
+            <div id="refine_search">
+                <form action="#">
+                    絞り込みワード：
+                    <input type="text" name="search" size="30" maxlength="20" value="" id="search"/>
+                </form>
+            </div>
+            <!-- ▲絞り込みワード検索 -->
+
+            <div id="hyouji01"></div>
+            <div id="hyouji02"></div>
+
+            <span id="export-link"></span>
+
+            <!-- ▼article -->
+            <article>
+                <!-- ▼コンテンツをJSON形式で保存 -->
+                <div id="table" class="table-editable">
+                    <!-- ▼HTMLの直接編集 -->
+                    <table id="table p2146-2-table" class="table table-editable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Value</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tbody id="p2146-2-tbody">
+                        <tr class="hide">
+                            <td contenteditable="true">Untitled</td>
+                            <td contenteditable="true">undefined</td>
+                            <td>
+                                <button class="upList">↑上へ</button>
+                                <button class="downList">↓下へ</button>
+                            </td>
+                            <td><input value="+" type="button" class="addList"/>
+                                <input value="-" type="button" class="removeList"/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- ▲HTMLの直接編集 -->
+                </div>
+                <!-- ▲コンテンツをJSON形式で保存 -->
+                <button id="export-btn" class="btn btn-primary">Export Data</button>
+            </article>
+        </article>
+    </div>
+    <!-- ▲article -->
+    <p id="closing"></p>
+    <!-- ▲▲main -->
+    <!-- ▼▼footer -->
+    <footer>
+        <p class="copyright"></p>
+    </footer>
+    <!-- ▲▲footer -->
+</div>
+<!-- ▲▲▲container -->
+{% endblock %}

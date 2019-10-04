@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"/>
+    <meta name="author" content="Tadashi Yokokawa">
+    <title>{{ name0 }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tools/jquery/jquery-ui.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tools/tabulator/tabulator.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/common.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='samples/sample_edit_html_directly/css/sample_common.css') }}">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='samples/{0}/css/{0}.css'.format(name0)) }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='tools/jquery/jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='tools/jquery/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='tools/quicksearch/jquery.quicksearch.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='tools/tabulator/tabulator.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/functions_common.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/common.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='samples/{0}/js/{0}.js'.format(name0)) }}"></script>
+</head>
+
+<body>
+{% block content %}
+    <!-- ここに別ファイルで書いたコンテンツが入る -->
+{% endblock %}
+</body>
+</html>

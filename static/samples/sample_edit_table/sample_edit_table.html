@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<meta name="author" content="Tadashi Yokokawa">
+<title>Webサイト作成</title>
+<link rel="stylesheet" type="text/css" href="../../tools/jquery/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../tools/tabulator/tabulator.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="css/sample_common.css">
+<link rel="stylesheet" type="text/css" href="css/sample_edit_table.css">
+<script type="text/javascript" src="../../tools/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../tools/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../tools/quicksearch/jquery.quicksearch.min.js"></script>
+<script type="text/javascript" src="../../tools/tabulator/tabulator.min.js"></script>
+<!--
+<script type="text/javascript" src="../../tools/underscorejs/underscore-min.js"></script> 
+-->
+<script type="text/javascript" src="../../js/functions_common.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="js/sample_edit_table.js"></script>
+</head>
+
+<body>
+<!-- ▼▼▼container -->
+<div id="container"> 
+  <!-- ▼▼header -->
+  <header> 
+    <!-- ▼Webサイト作成メニューへ戻る -->
+    <div id="menu_create_website">
+      <p><a href="../../../templates/html/menu_create_website.html">Webサイト作成へ</a></p>
+    </div>
+    <!-- ▲Webサイト作成メニューへ戻る --> 
+    <!-- ▲Homeへ戻る --> 
+    <!-- ▼ページタイトル -->
+    <div class="pageTitle">
+      <h1>HTMLを画面上で直接編集</h1>
+      <h2>★サブタイトル★</h2>
+    </div>
+    <!-- ▲ページタイトル --> 
+    <!-- ▼概要説明 -->
+    <div id="summary_parent">
+      <p id="summary_child">★概要説明★</p>
+    </div>
+    <!-- ▲概要説明 --> 
+  </header>
+  <!-- ▲▲header --> 
+  <!-- ▼▼main -->
+  <div id="main">
+    <div id="page_top"><a href="#"></a></div>
+    <!-- ▼article -->
+    <article>
+  <div id="table" class="table-editable">
+    <span class="table-add glyphicon glyphicon-plus"></span>
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td contenteditable="true">Stir Fry</td>
+        <td contenteditable="true">stir-fry</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+      <!-- This is our clonable table line -->
+      <tr class="hide">
+        <td contenteditable="true">Untitled</td>
+        <td contenteditable="true">undefined</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <button id="export-btn" class="btn btn-primary">Export Data</button>
+  <p id="export"></p>
+</div>    </article>
+    <!-- ▲article -->
+    <p id="closing"></p>
+  </div>
+  <!-- ▲▲main --> 
+  <!-- ▼▼footer -->
+  <footer>
+    <p class="copyright"></p>
+  </footer>
+  <!-- ▲▲footer --> 
+</div>
+<!-- ▲▲▲container -->
+</body>
+</html>

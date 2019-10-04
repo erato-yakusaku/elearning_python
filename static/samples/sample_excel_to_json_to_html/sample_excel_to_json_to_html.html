@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<meta name="author" content="Tadashi Yokokawa">
+<title>Webサイト作成</title>
+<link rel="stylesheet" type="text/css" href="../../tools/jquery/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../tools/tabulator/dist/css/tabulator.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="css/sample_common.css">
+<link rel="stylesheet" type="text/css" href="css/sample_excel_to_json_to_html.css">
+<script type="text/javascript" src="../../tools/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../tools/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../tools/quicksearch/jquery.quicksearch.min.js"></script>
+<script type="text/javascript" src="../../tools/tabulator/dist/js/tabulator.min.js"></script>
+<script type="text/javascript" src="../../tools/tabulator/dist/js/jquery_wrapper.min.js"></script>
+<script type="text/javascript" src="js/sample_excel_to_json_to_html.js"></script>
+<script type="text/javascript" src="data/sample_excel_to_json_to_html.json"></script>
+<script type="text/javascript" src="../../js/functions_common.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+
+<body>
+<!-- ▼▼▼container -->
+<div id="container"> 
+  <!-- ▼▼header -->
+  <header> 
+    <!-- ▼Webサイト作成メニューへ戻る -->
+    <div id="menu_create_website">
+      <p><a href="../../../templates/html/menu_create_website.html">Webサイト作成へ</a></p>
+    </div>
+    <!-- ▲Webサイト作成メニューへ戻る --> 
+    <!-- ▼ページタイトル -->
+    <div class="pageTitle">
+      <h1>Excel&nbsp;→&nbsp;JSON&nbsp;→&nbsp;HTML読み込み</h1>
+      <h2>&nbsp;</h2>
+    </div>
+    <!-- ▲ページタイトル --> 
+    <!-- ▼概要説明 -->
+    <div id="summary_parent">
+      <p id="summary_child"><strong>Excel</strong>でメニューや手順を作成&nbsp;→&nbsp;JSONファイルに変換&nbsp;→&nbsp;HTML読み込みを<strong>自動化</strong>します。</p>
+    </div>
+    <!-- ▲概要説明 --> 
+  </header>
+  <!-- ▲▲header -->
+  <div id="main"> 
+    
+    <!-- ▼▼▼▼▼★★★★★仮置き Excel → JSON → HTML変換試行用★★★★★▼▼▼▼▼ -->
+    <button id="button_sample_excel_to_json_to_html">このページの変更・更新（Excel起動）</button>
+    <!-- ▲▲▲▲▲★★★★★仮置き Excel → JSON → HTML変換試行用★★★★★▲▲▲▲▲ --> 
+    
+    <!-- ▼ページ先頭へ戻る -->
+    <div id="page_top"><a href="#"></a></div>
+    <!-- ▲ページ先頭へ戻る --> 
+    <!-- ▼article メニュー -->
+    <article id="menu"> 
+      <!-- ▼絞り込みワード検索 -->
+      <div id="refine_search">
+        <form action="#">
+          絞り込みワード：
+          <input type="text" name="search"  size="30" maxlength="20" value="" id="search" />
+        </form>
+      </div>
+      <!-- ▲絞り込みワード検索 --> 
+      <!-- ▼table メニュー（Excel → JSON → HTML 動作はsample_menu_create.jsに記述） -->
+      <div id="excel_to_json_to_html"></div>
+      <!-- ▲table メニュー --> 
+    </article>
+    <!-- ▲article メニュー --> 
+  </div>
+ 
+ 
+ 
+ 
+ <div id="hyouji01"></div>
+ 
+ 
+ 
+ 
+  <!-- ▲▲main --> 
+  <!-- ▼▼footer -->
+  <footer>
+    <p class="copyright"></p>
+  </footer>
+  <!-- ▲▲footer --> 
+</div>
+<!-- ▲▲▲container -->
+</body>
+</html>

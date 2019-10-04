@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- ▼▼▼container -->
+<div id="container">
+  <!-- ▼▼header -->
+  <header>
+    <!-- ▼データ解析 Python（Home）へ戻る -->
+    <div id="home">
+      <p><a href="{{ url_for('menu_data_analysis_python')}}">データ解析&nbsp;Pythonへ</a></p>
+    </div>
+    <!-- ▲データ解析 Python（Home）へ戻る -->
+    <!-- ▼ページタイトル -->
+    <div class="pageTitle">
+      <h1>Webサイト作成</h1>
+      <h2>HTML&amp;CSS&amp;JavaScript</h2>
+    </div>
+    <!-- ▲ページタイトル -->
+    <!-- ▼概要説明 -->
+    <div id="summary_parent">
+      <p id="summary_child">Webサイトを作成するためのTipsです。<strong>無料</strong>で便利なツールに絞って紹介します。</p>
+    </div>
+    <!-- ▲概要説明 -->
+  </header>
+  <!-- ▲▲header -->
+  <!-- ▼▼main -->
+  <div id="main">
+    <!-- ▼ページ先頭へ戻る -->
+    <div id="page_top"><a href="#"></a></div>
+    <!-- ▲ページ先頭へ戻る -->
+    <!-- ▼article メニュー -->
+    <article id="menu">
+      <!-- ▼絞り込みワード検索 -->
+      <div id="refine_search">
+        <form action="#">
+          絞り込みワード：
+          <input type="text" name="search"  size="30" maxlength="20" value="" id="search" />
+        </form>
+      </div>
+      <!-- ▲絞り込みワード検索 -->
+      <!-- ▼table メニュー -->
+      <table id="table_menu">
+        <!-- ▼大分類_環境設定 -->
+        <tbody>
+          <tr>
+            <th class="chapter01">環境設定</th>
+            <th class="chapter02"></th>
+            <th class="chapter03"></th>
+            <th class="chapter04"></th>
+            <th class="chapter05"></th>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"><a href="http://brackets.io/">Adobe Brackets</a></td>
+            <td class="section03">【参考（有料）】<a href="https://www.adobe.com/jp/products/dreamweaver.html">Adobe Dreamweaver</a></td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://jquery.com/">JQuery</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"><a href="https://jqueryui.com/">jQueryUI</a></td>
+            <td class="section03"></td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"><a href="https://underscorejs.org/">Underscore.js</a></td>
+            <td class="section03"></td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+        </tbody>
+        <!-- ▲大分類_環境設定 -->
+        <!-- ▼大分類_Webサイト作成 Tips（サンプルコード） -->
+        <tbody>
+          <tr>
+            <th class="chapter01">Webサイト作成Tips（サンプルコード）</th>
+            <th class="chapter02"></th>
+            <th class="chapter03"></th>
+            <th class="chapter04"></th>
+            <th class="chapter05"></th>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"><a href="../../static/samples/sample_quicksearch/sample_quicksearch.html"><span class="tooltip" title="リアルタイムに反応して絞り込んでいきます">絞り込みワード検索</span></a></td>
+            <td class="section03">Quicksearch</td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"><a href="{{ url_for('transit_another_page_sample',page_name='sample_edit_html_directly')}}"><span class="tooltip" title="HTML上で表を変更できます">HTMLの直接編集</span></a></td>
+            <td class="section03"></td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"><a href="https://www.buildinsider.net/web/jqueryuiref/0023"><span class="tooltip" title="事前にjQueryUIを入れてください">マウスを当てると補足文がポップアップ</span></a></td>
+            <td class="section03">Tooltip</td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"><a href="http://tabulator.info/"><span class="tooltip" title="テーブルタグの自動生成の他，多機能ツール">インタラクティブなテーブル作成</span></a></td>
+            <td class="section03">Tabulator</td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+        </tbody>
+        <!-- ▲大分類_jQuery Tips -->
+        <!-- ▼大分類_参考Webサイト -->
+        <tbody>
+          <tr>
+            <th class="chapter01">【参考】</th>
+            <th class="chapter02"></th>
+            <th class="chapter03"></th>
+            <th class="chapter04"></th>
+            <th class="chapter05"></th>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://www.colordic.org/"><span class="tooltip" title="和名・洋名・地下鉄の色まで！">色を調べる01Web色見本</span></a></td>
+            <td>色と名前とカラーコード</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://colorfloresta.com/?l=ja"><span class="tooltip" title="類似色まで表示！">色を調べる02色の森</span></a></td>
+            <td>写真からカラーコードを取得</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://www.color-sample.com"><span class="tooltip" title="色を完全網羅！">色を調べる03color-sample.com</span></a></td>
+            <td>色の検索の決定版</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="http://www.htmq.com/">HTMLクイックリファレンス</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://www.buildinsider.net/web/jqueryref">jQuery逆引きリファレンス</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><a href="https://www.buildinsider.net/web/jqueryuiref">jQueryUI逆引きリファレンス</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+        <!-- ▲大分類_参考Webサイト -->
+      </table>
+      <!-- ▲table メニュー -->
+    </article>
+    <!-- ▲article メニュー -->
+  </div>
+  <!-- ▲▲main -->
+  <!-- ▼▼footer -->
+  <footer>
+    <p class="copyright"></p>
+  </footer>
+  <!-- ▲▲footer -->
+</div>
+<!-- ▲▲▲container -->
+{% endblock %}

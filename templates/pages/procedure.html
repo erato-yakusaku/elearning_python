@@ -1,0 +1,52 @@
+{% extends "pages/layout_procedure.html" %}
+{% block content %}
+<!-- ▼▼▼container -->
+<div id="container">
+  <!-- ▼▼header -->
+  <header>
+    <!-- ▼データ解析 Python（Home）へ戻る -->
+    <div id="home">
+      <p><a href="{{ url_for('menu_data_analysis_python')}}">データ解析&nbsp;Pythonへ</a></p>
+    </div>
+    <!-- ▲データ解析 Python（Home）へ戻る -->
+    <!-- ▼ページタイトル -->
+    <div class="pageTitle">
+      <h1>{{ name0 }}</h1>
+      <h2>&nbsp;</h2>
+    </div>
+    <!-- ▲ページタイトル -->
+    <!-- ▼概要説明 -->
+    <div id="summary_parent">
+      <p id="summary_child">★フォーマット作成中★手順</div>
+    <!-- ▲概要説明 -->
+  </header>
+  <!-- ▲▲header -->
+  <div id="main">
+    <!-- ▼ページ先頭へ戻る -->
+    <div id="page_top"><a href="#"></a></div>
+    <!-- ▲ページ先頭へ戻る -->
+    <!-- ▼article メニュー -->
+    <article id="menu">
+      <!-- ▼絞り込みワード検索 -->
+      <div id="refine_search">
+        <form action="#">
+          絞り込みワード：
+            <label for="search"></label><input type="text" name="search" size="30" maxlength="20" value="" id="search" />
+        </form>
+      </div>
+      <!-- ▲絞り込みワード検索 -->
+      <!-- ▼table メニュー（Excel → JSON → HTML 動作はprocedure.jsに記述） -->
+      <div id="procedure"></div>
+      <!-- ▲table メニュー -->
+    </article>
+    <!-- ▲article メニュー -->
+  </div>
+  <!-- ▲▲main -->
+  <!-- ▼▼footer -->
+  <footer>
+    <p class="copyright"></p>
+  </footer>
+  <!-- ▲▲footer -->
+</div>
+<!-- ▲▲▲container -->
+{% endblock %}

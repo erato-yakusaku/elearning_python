@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+<meta name="author" content="Tadashi Yokokawa">
+<title>絞り込みワード検索</title>
+<link rel="stylesheet" type="text/css" href="../../tools/jquery/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="../../tools/tabulator/dist/css/tabulator.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../../css/common.css">
+<link rel="stylesheet" type="text/css" href="css/sample_common.css">
+<link rel="stylesheet" type="text/css" href="css/sample_quicksearch.css">
+<script type="text/javascript" src="../../tools/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../tools/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../tools/quicksearch/jquery.quicksearch.min.js"></script>
+<script type="text/javascript" src="../../tools/tabulator/dist/js/tabulator.min.js"></script>
+<script type="text/javascript" src="../../tools/tabulator/dist/js/jquery_wrapper.min.js"></script>
+<script type="text/javascript" src="js/sample_quicksearch.js"></script>
+<script type="text/javascript" src="../../js/functions_common.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+
+<body>
+<!-- ▼▼▼container -->
+<div id="container"> 
+  <!-- ▼▼header -->
+  <header> 
+    <!-- ▼Webサイト作成メニューへ戻る -->
+    <div id="menu_create_website">
+      <p><a href="../../../templates/html/menu_create_website.html">Webサイト作成へ</a></p>
+    </div>
+    <!-- ▲Webサイト作成メニューへ戻る --> 
+    <!-- ▼ページタイトル -->
+    <div class="pageTitle">
+      <h1>絞り込みワード検索</h1>
+      <h2></h2>
+    </div>
+    <!-- ▲ページタイトル --> 
+    <!-- ▼概要説明 -->
+    <div id="summary_parent">
+      <p id="summary_child">入力した文字列に<strong>リアルタイムに反応</strong>してコンテンツを絞り込んでいきます。</p>
+    </div>
+    <!-- ▲概要説明 --> 
+  </header>
+  <!-- ▲▲header -->
+  <div id="main"> 
+    <!-- ▼ページ先頭へ戻る -->
+    <div id="page_top"><a href="#"></a></div>
+    <!-- ▲ページ先頭へ戻る --> 
+    <!-- ▼article メニュー -->
+    <article id="menu"> 
+      <!-- ▼絞り込みワード検索 -->
+      <div id="refine_search">
+        <form action="#">
+          <span class="tooltip" title="半角スペース区切りでAND条件も検索できます"> 絞り込みワード：</span>
+          <input type="text" name="search"  size="30" maxlength="20" value="" id="search" />
+        </form>
+      </div>
+      <!-- ▲絞り込みワード検索 --> 
+      <!-- ▼table メニュー -->
+      <caption>
+      サンプル1
+      </caption>
+      <table id="table_menu">
+        <tbody>
+          <tr>
+            <td>abc1</td>
+            <td>abc2</td>
+            <td>abc3</td>
+            <td>abc4</td>
+            <td>abc5</td>
+          </tr>
+          <tr>
+            <td>bcd1</td>
+            <td>bcd2</td>
+            <td>bcd3</td>
+            <td>bcd4</td>
+            <td>bcd5</td>
+          </tr>
+          <tr>
+            <td>cde1</td>
+            <td>cde2</td>
+            <td>cde3</td>
+            <td>cde4</td>
+            <td>cde5</td>
+          </tr>
+          <tr>
+            <td>あいう1</td>
+            <td>あいう2</td>
+            <td>あいう3</td>
+            <td>あいう4</td>
+            <td>あいう5</td>
+          </tr>
+          <tr>
+            <td>いうえ1</td>
+            <td>いうえ2</td>
+            <td>いうえ3</td>
+            <td>いうえ4</td>
+            <td>いうえ5</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- ▲table メニュー --> 
+    </article>
+    <!-- ▲article メニュー --> 
+  </div>
+  <!-- ▲▲main --> 
+  <!-- ▼▼footer -->
+  <footer>
+    <p class="copyright"></p>
+  </footer>
+  <!-- ▲▲footer --> 
+</div>
+<!-- ▲▲▲container -->
+</body>
+</html>

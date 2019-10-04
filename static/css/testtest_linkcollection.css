@@ -1,0 +1,95 @@
+@charset "utf-8";
+/***▼header・main・footer共通***/
+/*▽配置*/
+
+/*★css効いてるか確認用ok★*/
+#container {
+	background-color:var(--background-color-scale);
+}
+	
+.main {
+	position: relative;
+	height: 100vh;/* height_main */
+}
+/*△配置*/
+/***▲header・main・footer共通***/
+
+/***▼header***/
+/***▲header***/
+
+/*▼main*/
+/*マージン共通*/
+.subject {
+   position:absolute;
+	top:0.25vw;
+	left:65vw;
+	font-size:2.2vw;
+	color:var(--color-link);
+}
+#numberOfTitles {
+  position:absolute;
+  top:5vw;
+  left:2.5vw;
+  font-size:2.5vw;
+}
+
+/*リンク集テーブル*/
+/*テーブル全体*/
+.tabulator {
+    position:absolute;
+    top:9vw;
+    left:2.5vw;
+    width:95vw;
+}
+/*テーブルヘッダー*//*★要調整★*/
+.tabulator-header {
+    height:3vw;
+}
+tabulator-col-content {
+    height:3vw;
+    margin:0;
+    padding:0;
+}
+.tabulator-col-title {
+	text-align:center;
+    vertical-align:top;
+	font-size:1.8vw;
+}
+.tabulator-col:nth-child(1),.tabulator-col:nth-child(2),.tabulator-col:nth-child(3) {
+    width:3vw;
+}
+.tabulator-col:nth-child(4) {
+    width:11vw;
+}
+.tabulator-col:nth-child(5) {
+    width:75vw;
+}
+/*テーブルコンテンツ*/
+#table_linkcollection {
+	width:100vw;
+}
+.linkCollection td {
+	border-right: 0.1vw solid #bbb;
+	font-size:1.7vw;
+}
+.hen, .shou, .setu {
+	width:6vw;/*6.1vw;*//*thの幅を見て調整済*/
+	text-align:center;
+}
+.thumbnail1 {    
+	width:7vw;/*10vw;*/
+}
+.thumbnail1 img {
+	max-width:7vw;
+	height:3.5vw;
+	display: block; 
+	margin:auto; 
+}
+.title {
+	width:70vw;
+	text-align:left;
+}
+/*▲main*/
+
+/***▼footer***/
+/***▲footer***/
