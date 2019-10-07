@@ -222,7 +222,6 @@ h2 {
     text-align: center;
     color: #3f98ef;
 }
-
 /*▲ページ先頭へ戻るボタン*/
 /*▼絞り込みワード検索*/
 #refine_search {
@@ -230,7 +229,6 @@ h2 {
     padding-left: 50vw;
     font-size: var(--font-size-base-height);
 }
-
 /*▲絞り込みワード検索*/
 /*▼table メニュー*/
 #table_menu {
@@ -295,7 +293,6 @@ h2 {
     left: 5vw;
     font-size: var(--font-size-large-height);
 }
-
 /*▲お疲れさまでした！*/
 /***▲main***/
 

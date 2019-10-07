@@ -1,0 +1,138 @@
+{% extends "pages/layout_procedure.html" %}
+{% block content %}
+    <!-- ▼▼▼container -->
+    <div id="container">
+        <!-- ▼▼header -->
+        <header>
+            <!-- ▼データ解析 Python（Home）へ戻る -->
+            <div id="home">
+                <p><a href="{{ url_for('menu_data_analysis_python') }}">データ解析&nbsp;Pythonへ</a></p>
+            </div>
+            <!-- ▲データ解析 Python（Home）へ戻る -->
+            <!-- ▼ページタイトル -->
+            <div class="pageTitle">
+                <h1>Git関連の環境設定③</h1>
+                <h2>Git・GitHub・SourceTreeの設定</h2>
+            </div>
+            <!-- ▲ページタイトル -->
+            <!-- ▼概要説明 -->
+            <div id="summary_parent">
+                <p id="summary_child">個人でも共同でも使える開発環境を整えます。</p>
+            </div>
+            <!-- ▲概要説明 -->
+        </header>
+        <!-- ▲▲header -->
+        <!-- ▼▼main -->
+        <div id="main">
+            <div id="page_top"><a href="#"></a></div>
+            <!-- ▼article -->
+            <article>
+                <!-- ▼contents -->
+                <div class="contents">
+                    <ol>
+                        <li><a href="#procedure01">SourceTreeのダウンロード</a></li>
+                        <li><a href="#procedure02">SourceTreeのインストール</a></li>
+                    </ol>
+                </div>
+                <!-- ▲contents -->
+                <!-- ▼procedure -->
+                <div class="procedure">
+                    <ol>
+                        <li id="procedure01">
+                            <!-- 手順の冒頭にはclass="procedure"を指定しない -->
+                            SourceTreeのダウンロード
+                            <ol>
+                                <li class="proc">ここをクリック
+                                    <p><a href="https://www.atlassian.com/ja/software/sourcetree">https://www.atlassian.com/ja/software/sourcetree</a>
+                                    </p>
+                                    <p><img class="img_account" src="../../../static/img/git/download_sourcetree01a.png"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">Download for Windowsをクリック
+                                    <p><img class="img_account" src="../../../static/img/git/download_sourcetree01b.png"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">「～プライバシーポリシーに同意する。」にチェックを入れてDownloadをクリック
+                                    <p><img class="img_account" src="../../../static/img/git/download_sourcetree01c.png"
+                                            alt=""></p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li id="procedure02">
+                            SourceTreeのインストール
+                            <ol>
+                                <li class="proc">ダウンロードしたSourceTreeSetup-XXX.exeを適当なフォルダに置いてダブルクリック
+                                    <p>※ D:\tempに置いた場合です。</p>
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree01.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">「Create one for free.」をクリック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree02.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">メールアドレスを入力して「続行」をクリック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree03b.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">メールアドレス・氏名・パスワードを入力したあと、「私はロボットではありあせん」をチェック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree04a.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">質問に該当する画像にチェックを入れたあと、「確認」をクリック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree04b.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">「Agree and sign up」をクリック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree04c.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">表示されたメールアドレスの受信トレイを確認
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree05.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">「Verify my email address」をクリック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree06.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">ユーザー名を決めて入力したあと、「続行」をクリック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree07.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">「スキップ」をクリック
+                                    <p><img class="img_account" src="../../../static/img/git/install_sourcetree08.jpg"
+                                            alt=""></p>
+                                </li>
+                                <li class="proc">「リポジトリのインポートを」をクリック
+                                    <p><img class="img_account"
+                                            src="../../../static/img/git/install_sourcetree09import.jpg" alt=""></p>
+                                </li>
+                                <li class="proc">ソースは「Git」を選択したあと、インポートするリポジトリのURLを入力して「リポジトリのインポートを」をクリック
+                                    <p>※
+                                        データ解析Python（このサイト）をインポートする場合です。https://github.com/erato-yakusaku/elearning_python</p>
+                                    <p><img class="img_account"
+                                            src="../../../static/img/git/install_sourcetree10import.jpg" alt=""></p>
+                                    <p><img class="img_account"
+                                            src="../../../static/img/git/install_sourcetree11import.jpg" alt=""></p>
+                                </li>
+                                <li class="proc">終了するときは、左下のアカウントアイコンをクリックして現れるポップアップの「Log out」をクリック
+                                    <p><img class="img_account"
+                                            src="../../../static/img/git/install_sourcetree12import.jpg" alt=""></p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <!-- ▲procedure -->
+            </article>
+            <!-- ▲article -->
+            <p id="closing"></p>
+        </div>
+        <!-- ▲▲main -->
+        <!-- ▼▼footer -->
+        <footer>
+            <p class="copyright"></p>
+        </footer>
+        <!-- ▲▲footer -->
+    </div>
+    <!-- ▲▲▲container -->
+{% endblock %}

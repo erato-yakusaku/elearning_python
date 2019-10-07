@@ -1,1 +1,1 @@
-var test_menu = [{'name': 'Untitled', 'value': 'undefinedxxxxxxxxxxxxx'}, {'name': 'Untitled', 'value': 'undefined'}, {'name': 'Untitled', 'value': 'undefined'}, {'name': 'Untitled', 'value': 'undefined'}, {'name': 'Untitled', 'value': 'undefinedzzzzzzzz'}]
+var test_menu = [{'name': 'Untitled', 'value': 'undefined'}, {'name': 'Untitled', 'value': 'undefined'}, {'name': 'Untitled', 'value': 'undefined‚ ‚ ‚ ‚ ‚ ‚ '}]

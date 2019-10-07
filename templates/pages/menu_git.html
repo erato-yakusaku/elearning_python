@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- ▼▼▼container -->
+<div id="container">
+  <!-- ▼▼header -->
+  <header>
+    <!-- ▼データ解析 Python（Home）へ戻る -->
+    <div id="home">
+      <p><a href="{{ url_for('menu_data_analysis_python')}}">データ解析&nbsp;Pythonへ</a></p>
+    </div>
+    <!-- ▲データ解析 Python（Home）へ戻る -->
+    <!-- ▼ページタイトル -->
+    <div class="pageTitle">
+      <h1>Git関連の環境設定</h1>
+      <h2>Git・GitHub・SourceTree</h2>
+    </div>
+    <!-- ▲ページタイトル -->
+    <!-- ▼概要説明 -->
+    <div id="summary_parent">
+      <p id="summary_child">プログラミングでもWebサイト作成でも使えるバージョン管理システムを整えます。</p>
+    </div>
+    <!-- ▲概要説明 -->
+  </header>
+  <!-- ▲▲header -->
+  <!-- ▼▼main -->
+  <div id="main">
+    <!-- ▼ページ先頭へ戻る -->
+    <div id="page_top"><a href="#"></a></div>
+    <!-- ▲ページ先頭へ戻る -->
+    <!-- ▼article メニュー -->
+    <article id="menu">
+      <!-- ▼絞り込みワード検索 -->
+      <div id="refine_search">
+        <form action="#">
+          絞り込みワード：
+          <input type="text" name="search"  size="30" maxlength="20" value="" id="search" />
+        </form>
+      </div>
+      <!-- ▲絞り込みワード検索 -->
+      <!-- ▼table メニュー -->
+      <table id="table_menu">
+        <!-- ▼大分類_Git関連の環境設定 -->
+        <tbody>
+          <tr>
+            <th class="chapter01">Git関連の環境設定</th>
+            <th class="chapter02"></th>
+            <th class="chapter03"></th>
+            <th class="chapter04"></th>
+            <th class="chapter05"></th>
+          </tr>
+          <tr>
+            <td class="section01"></td>
+            <td class="section02"></td>
+            <td class="section03"></td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+          <tr>
+            <td class="section01"><a href="{{ url_for('transit_another_page_git',page_name='install_sourcetree')}}">SourceTreeのインストール</a></td>
+            <td class="section02"></td>
+            <td class="section03"></td>
+            <td class="section04"></td>
+            <td class="section05"></td>
+          </tr>
+        </tbody>
+        <!-- ▲大分類_Git関連の環境設定 -->
+      </table>
+      <!-- ▲table メニュー -->
+    </article>
+    <!-- ▲article メニュー -->
+  </div>
+  <!-- ▲▲main -->
+  <!-- ▼▼footer -->
+  <footer>
+    <p class="copyright"></p>
+  </footer>
+  <!-- ▲▲footer -->
+</div>
+<!-- ▲▲▲container -->
+{% endblock %}

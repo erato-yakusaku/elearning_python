@@ -19,6 +19,13 @@ def transit_another_page(page_name):
                            )
 
 
+@app.route('/pages/git/<page_name>.html', methods=['GET'])
+def transit_another_page_git(page_name):
+    return render_template('/pages/git/%s.html' % page_name,
+                           name0=page_name,
+                           )
+
+
 @app.route('/pages/samples/<page_name>.html', methods=['GET'])
 def transit_another_page_sample(page_name):
     return render_template('/pages/samples/%s.html' % page_name,
